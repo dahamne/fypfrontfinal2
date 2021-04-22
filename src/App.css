@@ -1,0 +1,18 @@
+.AppBody{
+    background-color:#000f20;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    padding:2em
+}
+
+.header{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+}
+.ResultBoxes{
+    display:flex;
+    flex-direction:row
+}
