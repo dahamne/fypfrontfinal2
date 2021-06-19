@@ -2,14 +2,18 @@ import styled from 'styled-components/macro'
 
 export const BorderBox = styled.div`
 background-image:url(${process.env.PUBLIC_URL + '/images/borderTech.png'});
-width:500px;
-height:500px;
+width:30vw;
+height:30vw;
 background-size:cover;  
 background-repeat: no-repeat;
 background-position: center;
 display:flex;
 flex-direction:column;
 align-items:center;
+@media(max-width:1200px){
+    width:60vw;
+    height:60vw;
+}
 
 
 
@@ -40,15 +44,15 @@ export const Image = styled.img`
     
         {
             if (props.content==2) {
-                return "400px"
+                return "70%"
             }
 
             else if (props.content==3){
-                return "80px"
+                return "20%"
             }
 
             else{
-                return "300px"
+                return "70%"
             }
         }
     
@@ -60,15 +64,15 @@ export const Image = styled.img`
     
         {
             if (props.content==2) {
-                return "300px"
+                return "70%px"
             }
 
             else if (props.content==3){
-                return "80px"
+                return "20%"
             }
 
             else{
-                return "300px"
+                return "70%"
             }
         }
     
