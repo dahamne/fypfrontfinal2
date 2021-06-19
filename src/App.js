@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react'
 function App() {
 
   const [startFlag, setStartFlag]=useState(0);
-  const [state, setState] = useState({activity:["no activity"],user:["no data"]});
+  const [state, setState] = useState({activity:["no activity"],user:["no data"], location:["1"]});
 
 
   const startReading =()=>{
@@ -23,7 +23,7 @@ function App() {
     console.log("stop Reading");
     setStartFlag(0);
     fetchData();
-    setState({activity:["no activity"],user:["no data"]});
+    setState({activity:["no activity"],user:["no data"],location:["no data"]});
   }
 
 
@@ -62,12 +62,13 @@ function App() {
         <TopButton color={"#77e600"} clickhandle={stopReading} >Stop</TopButton>
       </TopButton.Container>
       <Indicator visibility={startFlag}/>
-      </div>
+       </div>
 
       <div className="BodyContent">
         <div className="ResultBoxes">
-        <ResultBox title="Activity" status={state.activity[0]} imageSource={process.env.PUBLIC_URL + '/images/' + state.activity[0] + '.gif' } /> 
-        <ResultBox title="User" status={state.user[0]} imageSource={process.env.PUBLIC_URL + '/images/no activity.gif'}/> 
+        <ResultBox title="Activity" status={state.activity[0]} imageSource={process.env.PUBLIC_URL + '/images/' + state.activity[0] + '.gif' }  content={1}/> 
+        <ResultBox title="User" status={state.user[0]} imageSource={process.env.PUBLIC_URL + '/images/auth.gif'}content={2} /> 
+        <ResultBox title="Location" status={state.location[0]} imageSource={process.env.PUBLIC_URL + '/images/cross.gif'} content={3}/> 
         </div>
       </div>
    
