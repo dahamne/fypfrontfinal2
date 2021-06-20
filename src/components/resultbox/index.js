@@ -11,16 +11,16 @@ const ResultBox = ({title,status,imageSource,content,...restProps}) => {
 
         switch(loc){
         case "1":
-            return {x:"-35%", y:"50%"};
+            return {x:"30%", y:"0"};
             break;
         case "2":
-            return {x:"35%", y:"50%"};
+            return {x:"30%", y:"50%"};
             break;
         case "3":
-            return {x:"-35%", y:"50%"};
+            return {x:"-30%", y:"50%"};
             break;
         case "4":
-            return {x:"-35%", y:"0"};
+            return {x:"-30%", y:"0"};
             break;
         case "5":
             return {x:"0", y:"25%"};

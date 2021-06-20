@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
 
 export const BorderBox = styled.div`
-background-image:url(${process.env.PUBLIC_URL + '/images/borderTech2.png'});
+background-image:url(${props=>props.content==3?process.env.PUBLIC_URL + '/images/borderTech2.png':process.env.PUBLIC_URL + '/images/borderTech.png'});
 width:30vw;
 height:30vw;
 background-size:cover;  
