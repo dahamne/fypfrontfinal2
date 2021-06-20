@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
 
 export const BorderBox = styled.div`
-background-image:url(${process.env.PUBLIC_URL + '/images/borderTech.png'});
+background-image:url(${process.env.PUBLIC_URL + '/images/borderTech2.png'});
 width:30vw;
 height:30vw;
 background-size:cover;  
@@ -10,7 +10,7 @@ background-position: center;
 display:flex;
 flex-direction:column;
 align-items:center;
-@media(max-width:1200px){
+@media(max-width:800px){
     width:60vw;
     height:60vw;
 }
@@ -31,11 +31,12 @@ padding-left:3.5rem;
 export const Title = styled.h1`
 color:red;
 margin-right:1rem;
-font-size:2rem;
+font-size:1.5rem;
 `;
 
 export const Status =styled.h1`
 color:white;
+font-size:1.5rem;
 `;
 
 export const Image = styled.img`
@@ -84,4 +85,3 @@ export const Image = styled.img`
     left:${props=>props.position.x};
     top:${props=>props.position.y};
 `;
-
